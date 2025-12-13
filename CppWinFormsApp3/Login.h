@@ -1,5 +1,5 @@
 ﻿#pragma once
-
+#include <Windows.h>
 namespace CppWinFormsApp3 {
 
     using namespace System;
@@ -18,6 +18,11 @@ namespace CppWinFormsApp3 {
         Login(void)
         {
             InitializeComponent();
+
+            RoundButton(btnStudents, 30);
+            RoundButton(btnDepartments, 30);
+            RoundButton(btnResult, 30);
+
         }
 
     protected:
