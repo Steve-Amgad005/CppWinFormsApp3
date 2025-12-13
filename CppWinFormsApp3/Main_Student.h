@@ -36,7 +36,7 @@ namespace CppWinFormsApp3 {
 
 			// Brush بيعمل التدرج اللوني
 			LinearGradientBrush^ brush =
-				gcnew LinearGradientBrush(this->ClientRectangle, color1, color2, LinearGradientMode::Vertical);
+				gcnew LinearGradientBrush(this->ClientRectangle, color2, color1, LinearGradientMode::Horizontal);
 
 			// يرسم الخلفية
 			e->Graphics->FillRectangle(brush, this->ClientRectangle);
