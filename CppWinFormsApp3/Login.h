@@ -116,11 +116,10 @@ namespace CppWinFormsApp3 {
             this->Controls->Add(this->txtPassword);
             this->Controls->Add(this->btnLogin);
             this->Controls->Add(this->lblMessage);
-            this->Name = L"Login";
-            this->Text = L"Login Page";
-            // Make the form non-resizable
             this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
             this->MaximizeBox = false;
+            this->Name = L"Login";
+            this->Text = L"Login Page";
             this->ResumeLayout(false);
             this->PerformLayout();
 
