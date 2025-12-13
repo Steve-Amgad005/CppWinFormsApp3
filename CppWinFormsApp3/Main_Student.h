@@ -68,6 +68,10 @@ namespace CppWinFormsApp3 {
 			this->ClientSize = Drawing::Size(1032, 588);
 			this->Controls->Add(this->Headr);
 			this->WindowState = FormWindowState::Maximized;
+			// prevent resizing
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->MaximizeBox = false;
+
 			this->Text = L"Student Main Page";
 			this->Load += gcnew EventHandler(this, &Main_student::Main_student_Load);
 
