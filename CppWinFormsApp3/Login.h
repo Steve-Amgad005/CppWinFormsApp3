@@ -9,7 +9,10 @@ namespace CppWinFormsApp3 {
     using namespace System::Data;
     using namespace System::Drawing;
     namespace CppWinFormsApp3 { ref class MyForm1; };
+    namespace CppWinFormsApp3 { ref class Admin_Page; };
 #include "Main_Student.h"
+#include "Admin_Page.h"
+
 
 
     public ref class Login : public System::Windows::Forms::Form
@@ -18,10 +21,6 @@ namespace CppWinFormsApp3 {
         Login(void)
         {
             InitializeComponent();
-
-            RoundButton(btnStudents, 30);
-            RoundButton(btnDepartments, 30);
-            RoundButton(btnResult, 30);
 
         }
 
@@ -40,6 +39,7 @@ namespace CppWinFormsApp3 {
     private: System::Windows::Forms::Label^ lblPassword;
     private: System::Windows::Forms::Label^ lblMessage;
     private: System::Windows::Forms::Panel^ panel1;
+    private: System::Windows::Forms::Button^ button1;
 
     private:
         System::ComponentModel::Container^ components;
@@ -54,6 +54,7 @@ namespace CppWinFormsApp3 {
             this->lblPassword = (gcnew System::Windows::Forms::Label());
             this->lblMessage = (gcnew System::Windows::Forms::Label());
             this->panel1 = (gcnew System::Windows::Forms::Panel());
+            this->button1 = (gcnew System::Windows::Forms::Button());
             this->panel1->SuspendLayout();
             this->SuspendLayout();
             // 
@@ -127,6 +128,7 @@ namespace CppWinFormsApp3 {
             // 
             // panel1
             // 
+            this->panel1->Controls->Add(this->button1);
             this->panel1->Controls->Add(this->txtUsername);
             this->panel1->Controls->Add(this->lblUsername);
             this->panel1->Controls->Add(this->btnLogin);
@@ -137,6 +139,16 @@ namespace CppWinFormsApp3 {
             this->panel1->Size = System::Drawing::Size(539, 257);
             this->panel1->TabIndex = 6;
             this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Login::panel1_Paint);
+            // 
+            // button1
+            // 
+            this->button1->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->button1->Location = System::Drawing::Point(13, 188);
+            this->button1->Name = L"button1";
+            this->button1->Size = System::Drawing::Size(143, 55);
+            this->button1->TabIndex = 7;
+            this->button1->Text = L"Fuck u steve";
+            this->button1->Click += gcnew System::EventHandler(this, &Login::button1_Click);
             // 
             // Login
             // 
@@ -212,5 +224,10 @@ namespace CppWinFormsApp3 {
     private: System::Void txtUsername_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
 
-    };
+    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+        CppWinFormsApp3::Admin_Page^ mainForm = gcnew CppWinFormsApp3::Admin_Page();
+        mainForm->Show();  // Show the main form
+        this->Hide();      // Hide the login form
+    }
+};
 }

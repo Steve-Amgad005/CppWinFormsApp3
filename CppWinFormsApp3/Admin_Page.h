@@ -72,9 +72,6 @@ namespace CppWinFormsApp3 {
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxLogo))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// panel1
-			// 
 			this->panel1->AccessibleName = L"panelHeader";
 			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(83)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
 				static_cast<System::Int32>(static_cast<System::Byte>(112)));
@@ -85,9 +82,6 @@ namespace CppWinFormsApp3 {
 			this->panel1->Size = System::Drawing::Size(1156, 116);
 			this->panel1->TabIndex = 0;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Admin_Page::panel1_Paint);
-			// 
-			// pictureBoxLogo
-			// 
 			this->pictureBoxLogo->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBoxLogo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBoxLogo.Image")));
 			this->pictureBoxLogo->Location = System::Drawing::Point(1035, 7);
@@ -96,9 +90,6 @@ namespace CppWinFormsApp3 {
 			this->pictureBoxLogo->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBoxLogo->TabIndex = 1;
 			this->pictureBoxLogo->TabStop = false;
-			// 
-			// lblTitle
-			// 
 			this->lblTitle->AccessibleDescription = L"";
 			this->lblTitle->AccessibleName = L"";
 			this->lblTitle->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -112,9 +103,6 @@ namespace CppWinFormsApp3 {
 			this->lblTitle->Text = L"kmr";
 			this->lblTitle->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->lblTitle->Click += gcnew System::EventHandler(this, &Admin_Page::label1_Click);
-			// 
-			// button3
-			// 
 			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(90)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
 				static_cast<System::Int32>(static_cast<System::Byte>(120)));
 			this->button3->FlatAppearance->BorderSize = 0;
@@ -129,9 +117,6 @@ namespace CppWinFormsApp3 {
 			this->button3->Text = L"kmr";
 			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &Admin_Page::button1_Click);
-			// 
-			// button1
-			// 
 			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(90)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
 				static_cast<System::Int32>(static_cast<System::Byte>(120)));
 			this->button1->FlatAppearance->BorderSize = 0;
@@ -146,9 +131,6 @@ namespace CppWinFormsApp3 {
 			this->button1->Text = L"kmr";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &Admin_Page::button1_Click);
-			// 
-			// button2
-			// 
 			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(90)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
 				static_cast<System::Int32>(static_cast<System::Byte>(120)));
 			this->button2->FlatAppearance->BorderSize = 0;
@@ -163,9 +145,6 @@ namespace CppWinFormsApp3 {
 			this->button2->Text = L"kmr";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &Admin_Page::button1_Click);
-			// 
-			// button4
-			// 
 			this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(90)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
 				static_cast<System::Int32>(static_cast<System::Byte>(120)));
 			this->button4->FlatAppearance->BorderSize = 0;
@@ -179,9 +158,6 @@ namespace CppWinFormsApp3 {
 			this->button4->TabIndex = 2;
 			this->button4->Text = L"kmr";
 			this->button4->UseVisualStyleBackColor = false;
-			// 
-			// Admin_Page
-			// 
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(118)), static_cast<System::Int32>(static_cast<System::Byte>(63)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->ClientSize = System::Drawing::Size(1264, 681);
