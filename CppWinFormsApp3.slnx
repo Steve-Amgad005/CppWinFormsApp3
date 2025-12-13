@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="CppWinFormsApp3/CppWinFormsApp3.vcxproj" />
+  <Project Path="CppWinFormsApp3/CppWinFormsApp3.vcxproj" Id="68df7aec-7744-453e-b7f3-5c996f900a28" />
 </Solution>
