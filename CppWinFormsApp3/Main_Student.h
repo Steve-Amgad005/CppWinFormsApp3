@@ -53,22 +53,23 @@ namespace CppWinFormsApp3 {
 		void InitializeComponent(void)
 		{
 			this->SuspendLayout();
-
+			// 
+			// Main_student
+			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1032, 588);
-			this->Name = L"Student Main Page";
-			this->Text = L"Student Main Page";
-
-			// يمنع تغيير الحجم (اختياري)
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
-
-			// Start the form maximized so it fills the screen
+			this->Name = L"Main_student";
+			this->Text = L"Student Main Page";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
-
+			this->Load += gcnew System::EventHandler(this, &Main_student::Main_student_Load);
 			this->ResumeLayout(false);
+
 		}
 #pragma endregion
+	private: System::Void Main_student_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }

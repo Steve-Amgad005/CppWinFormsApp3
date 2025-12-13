@@ -8,6 +8,9 @@ namespace CppWinFormsApp3 {
     using namespace System::Windows::Forms;
     using namespace System::Data;
     using namespace System::Drawing;
+    namespace CppWinFormsApp3 { ref class MyForm1; };
+#include "Main_Student.h"
+
 
     public ref class Login : public System::Windows::Forms::Form
     {
@@ -120,6 +123,7 @@ namespace CppWinFormsApp3 {
             this->MaximizeBox = false;
             this->Name = L"Login";
             this->Text = L"Login Page";
+            this->Load += gcnew System::EventHandler(this, &Login::Login_Load);
             this->ResumeLayout(false);
             this->PerformLayout();
 
@@ -129,15 +133,21 @@ namespace CppWinFormsApp3 {
         String^ username = txtUsername->Text;
         String^ password = txtPassword->Text;
 
-        // مثال بيانات ثابتة
         if (username == "admin" && password == "1234") {
             lblMessage->ForeColor = System::Drawing::Color::Green;
             lblMessage->Text = "Login Successful!";
+
+            // Create the Main_student form, not MyForm1
+            CppWinFormsApp3::Main_student^ mainForm = gcnew CppWinFormsApp3::Main_student();
+            mainForm->Show();  // Show the main form
+            this->Hide();      // Hide the login form
         }
         else {
             lblMessage->ForeColor = System::Drawing::Color::Red;
             lblMessage->Text = "Invalid Username or Password";
         }
     }
-    };
+    private: System::Void Login_Load(System::Object^ sender, System::EventArgs^ e) {
+    }
+};
 }
