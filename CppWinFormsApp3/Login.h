@@ -184,7 +184,7 @@ private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Form
             pnl->ClientRectangle,
             System::Drawing::Color::FromArgb(0xB3, 0xB3, 0xB3),
             System::Drawing::Color::FromArgb(0x5C, 0x0F, 0x8F),
-            System::Drawing::Drawing2D::LinearGradientMode::Vertical);
+            System::Drawing::Drawing2D::LinearGradientMode::Horizontal);
 
     e->Graphics->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias;
     e->Graphics->FillPath(brush, path);
