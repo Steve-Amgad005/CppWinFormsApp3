@@ -10,16 +10,16 @@ namespace CppWinFormsApp3 {
 	using namespace System::Drawing;
 	using namespace System::Drawing::Drawing2D;
 
-	public ref class MyForm1 : public System::Windows::Forms::Form
+	public ref class Main_student : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm1(void)
+		Main_student(void)
 		{
 			InitializeComponent();
 		}
 
 	protected:
-		~MyForm1()
+		~Main_student()
 		{
 			if (components)
 			{
@@ -63,6 +63,9 @@ namespace CppWinFormsApp3 {
 			// يمنع تغيير الحجم (اختياري)
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
+
+			// Start the form maximized so it fills the screen
+			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 
 			this->ResumeLayout(false);
 		}
