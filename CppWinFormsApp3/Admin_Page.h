@@ -102,14 +102,14 @@ namespace CppWinFormsApp3 {
 			this->lblTitle->AccessibleDescription = L"";
 			this->lblTitle->AccessibleName = L"";
 			this->lblTitle->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->lblTitle->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->lblTitle->Font = (gcnew System::Drawing::Font(L"Adobe Arabic", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lblTitle->ForeColor = System::Drawing::Color::White;
 			this->lblTitle->Location = System::Drawing::Point(0, 0);
 			this->lblTitle->Name = L"lblTitle";
 			this->lblTitle->Size = System::Drawing::Size(1156, 116);
 			this->lblTitle->TabIndex = 0;
-			this->lblTitle->Text = L"????? ??????? ??????? ???????????";
+			this->lblTitle->Text = L"kmr";
 			this->lblTitle->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->lblTitle->Click += gcnew System::EventHandler(this, &Admin_Page::label1_Click);
 			// 
@@ -126,7 +126,7 @@ namespace CppWinFormsApp3 {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(240, 60);
 			this->button3->TabIndex = 1;
-			this->button3->Text = L"??????";
+			this->button3->Text = L"kmr";
 			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &Admin_Page::button1_Click);
 			// 
@@ -143,7 +143,7 @@ namespace CppWinFormsApp3 {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(240, 60);
 			this->button1->TabIndex = 1;
-			this->button1->Text = L"???????";
+			this->button1->Text = L"kmr";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &Admin_Page::button1_Click);
 			// 
@@ -160,7 +160,7 @@ namespace CppWinFormsApp3 {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(240, 60);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"????? ????? ??????";
+			this->button2->Text = L"kmr";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &Admin_Page::button1_Click);
 			// 
@@ -177,7 +177,7 @@ namespace CppWinFormsApp3 {
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(75, 49);
 			this->button4->TabIndex = 2;
-			this->button4->Text = L"?";
+			this->button4->Text = L"kmr";
 			this->button4->UseVisualStyleBackColor = false;
 			// 
 			// Admin_Page
