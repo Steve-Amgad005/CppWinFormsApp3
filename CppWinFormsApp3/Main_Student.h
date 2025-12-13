@@ -27,49 +27,95 @@ namespace CppWinFormsApp3 {
 			}
 		}
 
-		// هنا بنرسم الخلفية بالـ Gradient
+	private:
+		System::Windows::Forms::Panel^ Headr;
+		System::ComponentModel::Container^ components;
+
+		// ====== Gradient Background ======
+	protected:
 		virtual void OnPaint(PaintEventArgs^ e) override
 		{
-			// ألوان الجريدينت (غيرهم زي ما انت عايز)
-			Color color1 = Color::FromArgb(92, 15, 143);   // اللون الأول
-			Color color2 = Color::FromArgb(179, 179, 179);    // اللون الثاني
+			Color color1 = Color::FromArgb(92, 15, 143);
+			Color color2 = Color::FromArgb(179, 179, 179);
 
-			// Brush بيعمل التدرج اللوني
 			LinearGradientBrush^ brush =
 				gcnew LinearGradientBrush(this->ClientRectangle, color1, color2, LinearGradientMode::Horizontal);
 
-			// يرسم الخلفية
 			e->Graphics->FillRectangle(brush, this->ClientRectangle);
 
-			// مهم جدًا عشان باقي العناصر تظهر صح
 			Form::OnPaint(e);
 		}
 
+		// ====== Rounded Rectangle Function ======
 	private:
-		System::ComponentModel::Container^ components;
+		GraphicsPath^ GetRoundedRect(Rectangle rect, int radius)
+		{
+			GraphicsPath^ path = gcnew GraphicsPath();
+			int d = radius * 2;
+
+			path->AddArc(rect.X, rect.Y, d, d, 180, 90);
+			path->AddArc(rect.Right - d, rect.Y, d, d, 270, 90);
+			path->AddArc(rect.Right - d, rect.Bottom - d, d, d, 0, 90);
+			path->AddArc(rect.X, rect.Bottom - d, d, d, 90, 90);
+			path->CloseFigure();
+
+			return path;
+		}
 
 #pragma region Windows Form Designer generated code
 
 		void InitializeComponent(void)
 		{
+			this->Headr = (gcnew System::Windows::Forms::Panel());
 			this->SuspendLayout();
+
+			// 
+			// Headr
+			// 
+			this->Headr->Location = System::Drawing::Point(100, 30);
+			this->Headr->Name = L"Headr";
+			this->Headr->Size = System::Drawing::Size(850, 90);
+			this->Headr->BackColor = Color::Transparent;
+			this->Headr->Paint += gcnew PaintEventHandler(this, &Main_student::Headr_Paint);
+
 			// 
 			// Main_student
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1032, 588);
+			this->Controls->Add(this->Headr);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
 			this->Name = L"Main_student";
 			this->Text = L"Student Main Page";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
-			this->Load += gcnew System::EventHandler(this, &Main_student::Main_student_Load);
 			this->ResumeLayout(false);
-
 		}
 #pragma endregion
-	private: System::Void Main_student_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
+
+		// ====== Panel Paint (Rounded Header) ======
+	private:
+		System::Void Headr_Paint(System::Object^ sender, PaintEventArgs^ e)
+		{
+			Panel^ panel = safe_cast<Panel^>(sender);
+
+			e->Graphics->SmoothingMode = SmoothingMode::AntiAlias;
+
+			// لون الـ Header (غيره براحتك)
+			Color panelColor = Color::FromArgb(45, 45, 48);
+
+			Rectangle rect = panel->ClientRectangle;
+			rect.Width -= 1;
+			rect.Height -= 1;
+
+			// درجة التدوير
+			int radius = 30;
+
+			GraphicsPath^ path = GetRoundedRect(rect, radius);
+			SolidBrush^ brush = gcnew SolidBrush(panelColor);
+
+			e->Graphics->FillPath(brush, path);
+		}
 	};
 }
