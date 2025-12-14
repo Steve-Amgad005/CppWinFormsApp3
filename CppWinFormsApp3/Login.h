@@ -172,15 +172,16 @@ namespace CppWinFormsApp3 {
     private: System::Void btnLogin_Click(System::Object^ sender, System::EventArgs^ e) {
         String^ username = txtUsername->Text;
         String^ password = txtPassword->Text;
+        // Create the Main_student form, not MyForm1
+        CppWinFormsApp3::Main_student^ mainForm = gcnew CppWinFormsApp3::Main_student();
+        mainForm->Show();  // Show the main form
+        this->Hide();      // Hide the login form
 
         if (username == "admin" && password == "1234") {
             lblMessage->ForeColor = System::Drawing::Color::Green;
             lblMessage->Text = "Login Successful!";
 
-            // Create the Main_student form, not MyForm1
-            CppWinFormsApp3::Main_student^ mainForm = gcnew CppWinFormsApp3::Main_student();
-            mainForm->Show();  // Show the main form
-            this->Hide();      // Hide the login form
+
         }
         else {
             lblMessage->ForeColor = System::Drawing::Color::Red;
